@@ -4,9 +4,7 @@ A* router for finding an optimal path between two localities in Brno based on a 
 ## / Motivation /
 ## The main goal of this project is to implement the A* algorithm to find an optimal path between
 ## two localities in Brno. While finding the optimal path, the program takes into account the user's
-## preference of the route profile (flat, hilly, mountain). The program also calculates
-## an estimate of speed, overall work, and overall time of the ride, based on the user's physiological
-## parameters and elevation gained.
+## preference of the route profile (flat, hilly, mountain).
 ##
 ## The current network is made of 16 nodes and serves intentionally as a proof of concept. Its goal is to
 ## verify graph symmetry and correctness of the A* algorithm. 
@@ -36,6 +34,8 @@ A* router for finding an optimal path between two localities in Brno based on a 
 ##
 
 ## not done yet: ##
+##  The program also calculates an estimate of speed, overall work, and overall time of the ride, 
+## based on the user's physiological parameters and elevation gained.
 ## Once the optimal route is found, the program calculates:
 ## - recommended power in watts based on the rider's weight and training zone.
 ## - estimated overall time of the ride and average speed.
