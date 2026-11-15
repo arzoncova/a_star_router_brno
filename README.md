@@ -14,8 +14,8 @@ A* router for finding an optimal path between two localities in Brno based on a 
 ## / How it works /
 ## The road network is modeled as an undirected graph represented as a dictionary, where each key 
 ## represents a node. The list of each node defines its directly connected neighbours.
-## Nodes are placed in a 2D Cartesian system with its origin at locality Prýgl [0, 0]. Distances
-## do not correspond to reality and are just approximations. (1 unit in map is 100 metres in reality).
+## Nodes are placed in a 2D Cartesian system with its origin at locality Prygl [0, 0]. Distances
+## do not correspond to reality and are just approximations. (1 unit in map is about 100 metres in reality).
 ## The third element of each node is its elevation in meters above sea level.
 ##
 ## Correctness of the A* algorithm:
