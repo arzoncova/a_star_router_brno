@@ -26,11 +26,11 @@ A* router for finding an optimal path between two localities in Brno based on a 
 ## The heuristic function is set as the sum of the Euclidean distance from the current node to the goal 
 ## and a penalization of minimum guaranteed elevation gain, weighted by the user's ride profile.
 ## Because Euclidean distance is always the shortest path and the heuristic does not use negative 
-## elevation difference, h(n) <= h*(n) is ensured. 
+## elevation difference, heuristic(n) <= heuristic*(n) is ensured. 
 ##
 ## - Consistency:
 ## Both Euclidean distance and elevation gained satisfy the triangle inequality (any node on path between 
-## start and goal can only add distance or elevation gained), ensuring h(n) <= edge_cost(n, m) + h(m).
+## start and goal can only add distance or elevation gained), ensuring heuristic(n) <= edge_cost(n, m) + heuristic(m).
 ##
 
 ## not done yet: ##
