@@ -132,7 +132,7 @@ class Rider():
             print("Incorrect zone format: Use only number from 1 to 5.")
             return False
         if 150 < self.weight > 30:
-            print("Minimum of weight limit is set at 30 kg a maximum is set at 150 kg")
+            print("Minimum of weight limit is set at 30 kg maximum is set at 150 kg")
             return False
         return True
 
