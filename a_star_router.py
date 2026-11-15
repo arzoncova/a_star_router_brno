@@ -1,6 +1,6 @@
 
 import math
-from heapq import heappush, heappop # using priority queue
+from heapq import heappush, heappop # using priority queue for A*
 
 
 class CyclingRouter:
