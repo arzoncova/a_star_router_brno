@@ -166,7 +166,7 @@ def test_path(start: str, goal: str, profile: str):
     print("Chosen profile:", profile)
     print("Optimal path:", ' -> '.join(path))
     print("Elevation gained:", round(elevation, 2), "m")
-    print("Overall distance:", round(distance, 2), "m")
+    print("Overall distance:", round(distance / 1000, 2), "km")
     print ()
 
 
