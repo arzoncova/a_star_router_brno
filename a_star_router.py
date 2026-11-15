@@ -108,6 +108,7 @@ class CyclingRouter:
         return result
 
 class Rider():
+    
     def __init__(self, weight: float, zone: int):
         self.weight = weight
         self.zone = zone
