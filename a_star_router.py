@@ -1,4 +1,3 @@
-
 import math
 from heapq import heappush, heappop # using priority queue for A*
 
@@ -22,6 +21,16 @@ class CyclingRouter:
         return True
 
 
+    def correct_parameters(self, start: str, goal: str, profile: str) -> bool:
+        if start not in self.locations or goal not in self.locations:
+            print('Selected locality is not part of graph.')
+            return False
+        if profile not in self.profiles:
+            print('Selected profile is in incorrect format. Use from {flat, hilly, mountain}.')
+            return False
+        return True
+
+        
     def euclidean_distance(self, start: str | None, goal: str | None) -> float:
         if not start or not goal:
             return 0
@@ -46,6 +55,10 @@ class CyclingRouter:
 
 
     def a_star(self, start: str, goal: str, profile: str) -> tuple[float, list[str], float]:
+
+        if not self.correct_parameters(start, goal, profile):
+            return 0.0, [], 0.0
+
         start_heuristic = self.heuristic(start, goal, profile)
 
         heap: list[tuple[float, str]] = [(start_heuristic, start)]
@@ -114,17 +127,20 @@ class Rider():
         self.weight = weight
         self.zone = zone
 
-    def correct_parameters(self):
+    def correct_parameters(self) -> bool:
         if self.zone not in {1, 2, 3, 4, 5}:
             print("Incorrect zone format: Use only number from 1 to 5.")
-            return
+            return False
         if 150 < self.weight > 30:
             print("Minimum of weight limit is set at 30 kg a maximum is set at 150 kg")
-            return
+            return False
+        return True
 
     def calculate():
         pass
         # calculation of watts, average speed, ...
+
+
 
 PROFILES = {
     "flat" : 0.5,
@@ -180,7 +196,7 @@ def test_path(start: str, goal: str, profile: str):
     if path == []:
         print("A path from", start, "to", goal, "does not exist")
         return
-    
+
     print("Chosen profile:", profile)
     print("Optimal path:", ' -> '.join(path))
     print("Elevation gained:", round(elevation, 2), "m")
@@ -191,3 +207,4 @@ def test_path(start: str, goal: str, profile: str):
 if __name__ == "__main__":
     test_path("Prygl", "HANGAR Brno", "flat")
     test_path("Prygl", "HANGAR Brno", "mountain")
+o", "mountain")
