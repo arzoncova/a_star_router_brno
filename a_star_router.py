@@ -207,4 +207,3 @@ def test_path(start: str, goal: str, profile: str):
 if __name__ == "__main__":
     test_path("Prygl", "HANGAR Brno", "flat")
     test_path("Prygl", "HANGAR Brno", "mountain")
-o", "mountain")
