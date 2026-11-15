@@ -107,6 +107,22 @@ class CyclingRouter:
 
         return result
 
+class Rider():
+    def __init__(self, weight: float, zone: int):
+        self.weight = weight
+        self.zone = zone
+
+    def correct_parameters(self):
+        if self.zone not in {1, 2, 3, 4, 5}:
+            print("Incorrect zone format: Use only number from 1 to 5.")
+            return
+        if 150 < self.weight > 30:
+            print("Minimum of weight limit is set at 30 kg a maximum is set at 150 kg")
+            return
+
+    def calculate():
+        pass
+        # calculation of watts, average speed, ...
 
 PROFILES = {
     "flat" : 0.5,
